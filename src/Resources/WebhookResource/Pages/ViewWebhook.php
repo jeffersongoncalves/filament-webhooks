@@ -1,11 +1,11 @@
 <?php
 
-namespace JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages;
+namespace JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages;
 
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
 use JeffersonGoncalves\FilamentWebhooks\Actions\TestWebhookAction;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource;
 
 class ViewWebhook extends ViewRecord
 {

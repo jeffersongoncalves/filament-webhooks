@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Bus;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages\ListWebhooks;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages\ListWebhooks;
 use JeffersonGoncalves\FilamentWebhooks\Tests\Fixtures\TestUser;
 use JeffersonGoncalves\Webhooks\Models\Webhook;
 use Spatie\WebhookServer\CallWebhookJob;

@@ -4,7 +4,7 @@ namespace JeffersonGoncalves\FilamentWebhooks;
 
 use Filament\Panel;
 use JeffersonGoncalves\FilamentPluginCore\BasePlugin;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource;
 
 class FilamentWebhooksPlugin extends BasePlugin
 {

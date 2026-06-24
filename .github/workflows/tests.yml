@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [3.x]
+    branches: [2.x]
   pull_request:
-    branches: [3.x]
+    branches: [2.x]
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
         php: [8.2, 8.3, 8.4]
         laravel: ['11.*', '12.*']
         database: [sqlite]
-        filament: ['5.*']
+        filament: ['4.*']
 
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} - ${{ matrix.database }}
 

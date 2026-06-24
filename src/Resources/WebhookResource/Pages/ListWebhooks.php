@@ -1,10 +1,10 @@
 <?php
 
-namespace JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages;
+namespace JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages;
 
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource;
 
 class ListWebhooks extends ListRecords
 {

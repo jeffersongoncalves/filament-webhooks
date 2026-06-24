@@ -1,8 +1,8 @@
 <?php
 
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages\CreateWebhook;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages\EditWebhook;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages\ListWebhooks;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages\CreateWebhook;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages\EditWebhook;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages\ListWebhooks;
 use JeffersonGoncalves\FilamentWebhooks\Tests\Fixtures\TestUser;
 use JeffersonGoncalves\Webhooks\Enums\WebhookEvent;
 use JeffersonGoncalves\Webhooks\Models\Webhook;

@@ -37,9 +37,9 @@ abstract class TestCase extends BaseTestCase
             fn (string $modelName) => 'JeffersonGoncalves\\Webhooks\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
 
-        // Filament v5's SupportServiceProvider overrides Livewire's DataStore
-        // with DataStoreOverride using bind() instead of singleton(), causing a
-        // new instance (with its own WeakMap) on every resolve. This breaks
+        // Filament's SupportServiceProvider overrides Livewire's DataStore with
+        // DataStoreOverride using bind() instead of singleton(), causing a new
+        // instance (with its own WeakMap) on every resolve. This breaks
         // getErrorBag() which stores/retrieves across different WeakMap
         // instances. Fix: resolve once and re-register as a singleton instance.
         $dataStore = app(DataStore::class);

@@ -1,7 +1,7 @@
 <?php
 
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\RelationManagers\LogsRelationManager;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\RelationManagers\LogsRelationManager;
 use JeffersonGoncalves\Webhooks\Models\Webhook;
 
 it('resolves the configured model', function () {

@@ -1,13 +1,13 @@
 <div class="filament-hidden">
 
-![Filament Webhooks](https://raw.githubusercontent.com/jeffersongoncalves/filament-webhooks/3.x/art/jeffersongoncalves-filament-webhooks.png)
+![Filament Webhooks](https://raw.githubusercontent.com/jeffersongoncalves/filament-webhooks/2.x/art/jeffersongoncalves-filament-webhooks.png)
 
 </div>
 
 # Filament Webhooks
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-webhooks)[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-webhooks/tests.yml?branch=3.x&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/filament-webhooks/actions?query=workflow%3Atests+branch%3A3.x)[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-webhooks/fix-php-code-style-issues.yml?branch=3.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-webhooks/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A3.x)[![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-webhooks)[![License](https://img.shields.io/packagist/l/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](LICENSE.md)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-webhooks)[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-webhooks/tests.yml?branch=2.x&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/filament-webhooks/actions?query=workflow%3Atests+branch%3A2.x)[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-webhooks/fix-php-code-style-issues.yml?branch=2.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-webhooks/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A2.x)[![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-webhooks)[![License](https://img.shields.io/packagist/l/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](LICENSE.md)
 
-A Filament v5 panel UI for [jeffersongoncalves/laravel-webhooks](https://github.com/jeffersongoncalves/laravel-webhooks). Manage outgoing webhook endpoints, choose which model events they listen to, send test deliveries, and inspect delivery logs — all from your Filament panel.
+A Filament v4 panel UI for [jeffersongoncalves/laravel-webhooks](https://github.com/jeffersongoncalves/laravel-webhooks). Manage outgoing webhook endpoints, choose which model events they listen to, send test deliveries, and inspect delivery logs — all from your Filament panel.
 
 This package is purely the **UI layer**. All the heavy lifting (dispatching, signing, queueing, logging, and the `SendsWebhooks` model traits) lives in the framework-agnostic core package [jeffersongoncalves/laravel-webhooks](https://github.com/jeffersongoncalves/laravel-webhooks). Install and configure the core package to make your Eloquent models emit webhooks; install this package to manage them visually.
 
@@ -24,7 +24,7 @@ This package is purely the **UI layer**. All the heavy lifting (dispatching, sig
 Install the package via Composer:
 
 ```bash
-composer require jeffersongoncalves/filament-webhooks:"^3.0"
+composer require jeffersongoncalves/filament-webhooks:"^2.0"
 ```
 
 The core package [`jeffersongoncalves/laravel-webhooks`](https://github.com/jeffersongoncalves/laravel-webhooks) is pulled in automatically. Publish and run its migrations so the `webhooks` and `webhook_logs` tables exist:

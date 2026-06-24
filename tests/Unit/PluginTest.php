@@ -3,7 +3,7 @@
 use Filament\Facades\Filament;
 use JeffersonGoncalves\FilamentPluginCore\BasePlugin;
 use JeffersonGoncalves\FilamentWebhooks\FilamentWebhooksPlugin;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource;
 
 it('extends the shared base plugin', function () {
     expect(FilamentWebhooksPlugin::make())->toBeInstanceOf(BasePlugin::class);

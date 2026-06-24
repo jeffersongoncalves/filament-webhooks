@@ -1,6 +1,6 @@
 <?php
 
-namespace JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\RelationManagers;
+namespace JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\RelationManagers;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Columns\IconColumn;

@@ -1,9 +1,9 @@
 <?php
 
-namespace JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\Pages;
+namespace JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
-use JeffersonGoncalves\FilamentWebhooks\Resources\Webhooks\WebhookResource;
+use JeffersonGoncalves\FilamentWebhooks\Resources\WebhookResource;
 
 class CreateWebhook extends CreateRecord
 {
