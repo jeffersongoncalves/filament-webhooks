@@ -14,7 +14,7 @@ class EditWebhook extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            TestWebhookAction::make(),
+            TestWebhookAction::forPage(),
             Actions\ViewAction::make(),
             Actions\DeleteAction::make(),
         ];

@@ -10,7 +10,6 @@ use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
-use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
@@ -21,8 +20,8 @@ use JeffersonGoncalves\FilamentWebhooks\Tests\Fixtures\TestPanelProvider;
 use JeffersonGoncalves\FilamentWebhooks\Tests\Fixtures\TestUser;
 use JeffersonGoncalves\Webhooks\WebhooksServiceProvider;
 use Livewire\LivewireServiceProvider;
-use Livewire\Mechanisms\DataStore;
 use Orchestra\Testbench\TestCase as BaseTestCase;
+use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 use Spatie\WebhookServer\WebhookServerServiceProvider;
 
 abstract class TestCase extends BaseTestCase
@@ -37,14 +36,6 @@ abstract class TestCase extends BaseTestCase
             fn (string $modelName) => 'JeffersonGoncalves\\Webhooks\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
 
-        // Filament's SupportServiceProvider overrides Livewire's DataStore with
-        // DataStoreOverride using bind() instead of singleton(), causing a new
-        // instance (with its own WeakMap) on every resolve. This breaks
-        // getErrorBag() which stores/retrieves across different WeakMap
-        // instances. Fix: resolve once and re-register as a singleton instance.
-        $dataStore = app(DataStore::class);
-        app()->instance(DataStore::class, $dataStore);
-
         Filament::setCurrentPanel(Filament::getDefaultPanel());
 
         $this->withoutVite();
@@ -56,10 +47,10 @@ abstract class TestCase extends BaseTestCase
             LivewireServiceProvider::class,
             BladeIconsServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
+            BladeCaptureDirectiveServiceProvider::class,
             SupportServiceProvider::class,
             FilamentServiceProvider::class,
             FormsServiceProvider::class,
-            SchemasServiceProvider::class,
             TablesServiceProvider::class,
             ActionsServiceProvider::class,
             InfolistsServiceProvider::class,

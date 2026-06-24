@@ -2,39 +2,55 @@
 
 namespace JeffersonGoncalves\FilamentWebhooks\Actions;
 
-use Filament\Actions\Action;
+use Closure;
+use Filament\Actions\Action as PageAction;
 use Filament\Notifications\Notification;
-use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Actions\Action as TableAction;
 use JeffersonGoncalves\Webhooks\Facades\Webhooks;
 use JeffersonGoncalves\Webhooks\Models\Webhook;
 
 class TestWebhookAction
 {
-    public static function make(string $name = 'test'): Action
+    public static function make(string $name = 'test'): TableAction
     {
-        return Action::make($name)
+        return TableAction::make($name)
             ->label(__('filament-webhooks::webhooks.actions.test.label'))
-            ->icon(Heroicon::OutlinedPaperAirplane)
+            ->icon('heroicon-o-paper-airplane')
             ->color('gray')
             ->requiresConfirmation()
-            ->action(function (Webhook $record): void {
-                $log = Webhooks::test($record);
+            ->action(static::handler());
+    }
 
-                if ($log->success) {
-                    Notification::make()
-                        ->title(__('filament-webhooks::webhooks.actions.test.success'))
-                        ->body($log->response_code ? (string) $log->response_code : null)
-                        ->success()
-                        ->send();
+    public static function forPage(string $name = 'test'): PageAction
+    {
+        return PageAction::make($name)
+            ->label(__('filament-webhooks::webhooks.actions.test.label'))
+            ->icon('heroicon-o-paper-airplane')
+            ->color('gray')
+            ->requiresConfirmation()
+            ->action(static::handler());
+    }
 
-                    return;
-                }
+    protected static function handler(): Closure
+    {
+        return function (Webhook $record): void {
+            $log = Webhooks::test($record);
 
+            if ($log->success) {
                 Notification::make()
-                    ->title(__('filament-webhooks::webhooks.actions.test.failed'))
-                    ->body($log->error_message)
-                    ->danger()
+                    ->title(__('filament-webhooks::webhooks.actions.test.success'))
+                    ->body($log->response_code ? (string) $log->response_code : null)
+                    ->success()
                     ->send();
-            });
+
+                return;
+            }
+
+            Notification::make()
+                ->title(__('filament-webhooks::webhooks.actions.test.failed'))
+                ->body($log->error_message)
+                ->danger()
+                ->send();
+        };
     }
 }

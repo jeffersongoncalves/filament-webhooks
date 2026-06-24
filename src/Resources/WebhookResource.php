@@ -2,21 +2,19 @@
 
 namespace JeffersonGoncalves\FilamentWebhooks\Resources;
 
-use BackedEnum;
-use Filament\Actions\Action;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\ViewAction;
+use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\CheckboxList;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
-use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Utilities\Set;
-use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
@@ -33,7 +31,7 @@ use JeffersonGoncalves\Webhooks\Models\Webhook;
 
 class WebhookResource extends Resource
 {
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBolt;
+    protected static ?string $navigationIcon = 'heroicon-o-bolt';
 
     public static function getModel(): string
     {
@@ -70,9 +68,9 @@ class WebhookResource extends Resource
         return __('filament-webhooks::webhooks.plural_model_label');
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return $schema
+        return $form
             ->columns(null)
             ->schema([
                 Section::make(__('filament-webhooks::webhooks.form.section_endpoint'))
@@ -93,7 +91,7 @@ class WebhookResource extends Resource
                             ->suffixAction(
                                 Action::make('generateSecret')
                                     ->label(__('filament-webhooks::webhooks.form.generate_secret'))
-                                    ->icon(Heroicon::OutlinedArrowPath)
+                                    ->icon('heroicon-o-arrow-path')
                                     ->action(fn (Set $set) => $set('secret', Str::random(40)))
                             ),
                         TextInput::make('model')
@@ -161,13 +159,13 @@ class WebhookResource extends Resource
                         return $query;
                     }),
             ])
-            ->recordActions([
+            ->actions([
                 TestWebhookAction::make(),
                 ViewAction::make(),
                 EditAction::make(),
                 DeleteAction::make(),
             ])
-            ->toolbarActions([
+            ->bulkActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),

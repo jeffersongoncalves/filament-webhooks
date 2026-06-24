@@ -1,6 +1,6 @@
 {
     "name": "jeffersongoncalves/filament-webhooks",
-    "description": "Filament v4 UI for jeffersongoncalves/laravel-webhooks — manage outgoing webhooks, events and delivery logs from your panel.",
+    "description": "Filament v3 UI for jeffersongoncalves/laravel-webhooks — manage outgoing webhooks, events and delivery logs from your panel.",
     "keywords": [
         "jeffersongoncalves",
         "laravel",
@@ -19,19 +19,19 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "filament/filament": "^4.0",
-        "jeffersongoncalves/filament-plugin-core": "^2.0",
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "jeffersongoncalves/filament-plugin-core": "^1.0",
         "jeffersongoncalves/laravel-webhooks": "^1.0",
-        "spatie/laravel-package-tools": "^1.14.0"
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
-        "larastan/larastan": "^3.0",
-        "laravel/pint": "^1.21",
-        "orchestra/testbench": "^9.0|^10.0|^11.0",
-        "pestphp/pest": "^3.0|^4.0",
-        "pestphp/pest-plugin-laravel": "^3.0|^4.0",
-        "pestphp/pest-plugin-livewire": "^3.0|^4.0"
+        "larastan/larastan": "^2.0|^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^8.0|^9.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "pestphp/pest-plugin-laravel": "^2.0|^3.0",
+        "pestphp/pest-plugin-livewire": "^2.0|^3.0"
     },
     "autoload": {
         "psr-4": {

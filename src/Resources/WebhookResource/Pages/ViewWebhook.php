@@ -14,7 +14,7 @@ class ViewWebhook extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            TestWebhookAction::make(),
+            TestWebhookAction::forPage(),
             Actions\EditAction::make(),
         ];
     }
