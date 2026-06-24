@@ -1,0 +1,73 @@
+{
+    "name": "jeffersongoncalves/filament-webhooks",
+    "description": "Filament v5 UI for jeffersongoncalves/laravel-webhooks — manage outgoing webhooks, events and delivery logs from your panel.",
+    "keywords": [
+        "jeffersongoncalves",
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "webhooks",
+        "webhook"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/filament-webhooks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.0",
+        "jeffersongoncalves/filament-plugin-core": "^3.0",
+        "jeffersongoncalves/laravel-webhooks": "^1.0",
+        "spatie/laravel-package-tools": "^1.14.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.21",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0",
+        "pestphp/pest-plugin-livewire": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentWebhooks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentWebhooks\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-1.x": "1.x-dev",
+            "dev-2.x": "2.x-dev",
+            "dev-3.x": "3.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\FilamentWebhooks\\FilamentWebhooksServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
