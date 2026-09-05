@@ -5,6 +5,8 @@
 </div>
 
 # Filament Webhooks
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeffersongoncalves)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-webhooks)[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-webhooks/tests.yml?branch=3.x&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/filament-webhooks/actions?query=workflow%3Atests+branch%3A3.x)[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-webhooks/fix-php-code-style-issues.yml?branch=3.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-webhooks/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A3.x)[![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-webhooks)[![License](https://img.shields.io/packagist/l/jeffersongoncalves/filament-webhooks.svg?style=flat-square)](LICENSE.md)
 
 A Filament v5 panel UI for [jeffersongoncalves/laravel-webhooks](https://github.com/jeffersongoncalves/laravel-webhooks). Manage outgoing webhook endpoints, choose which model events they listen to, send test deliveries, and inspect delivery logs — all from your Filament panel.
