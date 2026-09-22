@@ -33,6 +33,9 @@ updates:
       - dependency-name: filament/*
         versions:
           - '>=4.0'
+      - dependency-name: jeffersongoncalves/filament-plugin-core
+        versions:
+          - '>=2.0'
     groups:
       composer-deps:
         patterns:
@@ -63,6 +66,9 @@ updates:
       - dependency-name: filament/*
         versions:
           - '>=5.0'
+      - dependency-name: jeffersongoncalves/filament-plugin-core
+        versions:
+          - '>=3.0'
     groups:
       composer-deps:
         patterns:
@@ -93,6 +99,9 @@ updates:
       - dependency-name: filament/*
         versions:
           - '>=6.0'
+      - dependency-name: jeffersongoncalves/filament-plugin-core
+        versions:
+          - '>=4.0'
     groups:
       composer-deps:
         patterns:
