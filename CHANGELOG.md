@@ -21,6 +21,10 @@ All notable changes to this project will be documented in this file.
 - Standardize README section structure
 - Add Buy Me a Coffee sponsor link
 
+### Features
+
+- **i18n:** Add translations for 17 languages
+
 ### Miscellaneous Tasks
 
 - Add GitHub Sponsors to FUNDING.yml (#7)
