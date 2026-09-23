@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### CI/CD
 
+- Standardize update-changelog workflow
 - Standardize tests workflow
 
 ## [3.1.0] - 2026-09-23
