@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### CI/CD
 
+- Auto-merge dependabot github-actions minor/patch
 - Standardize update-changelog workflow
 - Standardize tests workflow
 
