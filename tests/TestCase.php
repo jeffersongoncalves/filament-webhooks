@@ -18,6 +18,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use JeffersonGoncalves\FilamentWebhooks\FilamentWebhooksServiceProvider;
 use JeffersonGoncalves\FilamentWebhooks\Tests\Fixtures\TestPanelProvider;
 use JeffersonGoncalves\FilamentWebhooks\Tests\Fixtures\TestUser;
+use JeffersonGoncalves\PestPluginDatabaseMigrations\LoadsPackageMigrations;
 use JeffersonGoncalves\Webhooks\WebhooksServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
@@ -26,6 +27,7 @@ use Spatie\WebhookServer\WebhookServerServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {
+    use LoadsPackageMigrations;
     use RefreshDatabase;
 
     protected function setUp(): void
@@ -82,32 +84,6 @@ abstract class TestCase extends BaseTestCase
 
     protected function defineDatabaseMigrations(): void
     {
-        $migrationsPath = __DIR__.'/../vendor/jeffersongoncalves/laravel-webhooks/database/migrations';
-
-        if (! is_dir($migrationsPath)) {
-            return;
-        }
-
-        $stubs = glob($migrationsPath.'/*.php.stub') ?: [];
-
-        foreach ($stubs as $stub) {
-            $migrationFile = $migrationsPath.'/'.basename($stub, '.stub');
-
-            if (! file_exists($migrationFile)) {
-                copy($stub, $migrationFile);
-            }
-        }
-
-        $this->loadMigrationsFrom($migrationsPath);
-
-        $this->beforeApplicationDestroyed(function () use ($migrationsPath, $stubs) {
-            foreach ($stubs as $stub) {
-                $migrationFile = $migrationsPath.'/'.basename($stub, '.stub');
-
-                if (file_exists($migrationFile)) {
-                    unlink($migrationFile);
-                }
-            }
-        });
+        $this->loadPackageMigrations(WebhooksServiceProvider::class);
     }
 }
