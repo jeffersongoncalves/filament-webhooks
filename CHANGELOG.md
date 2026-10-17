@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file.
 
 - **deps:** Bump orhun/git-cliff-action (#31)
 
+### Testing
+
+- Load package migrations with pest-plugin-database-migrations
+
 ## [3.1.0] - 2026-09-23
 
 ### CI/CD
