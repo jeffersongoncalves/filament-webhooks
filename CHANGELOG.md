@@ -13,7 +13,12 @@ All notable changes to this project will be documented in this file.
 
 ### Dependencies
 
+- **deps:** Bump shivammathur/setup-php (#37)
 - **deps:** Bump orhun/git-cliff-action (#31)
+
+### Other
+
+- Auto-assign issues and pull requests
 
 ### Testing
 
