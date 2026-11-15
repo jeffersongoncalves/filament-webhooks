@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### CI/CD
 
+- Auto-merge dependabot github-actions minor/patch (#44)
 - Let the Pint workflow push its fixes
 - Auto-merge dependabot github-actions minor/patch
 - Standardize update-changelog workflow
@@ -13,6 +14,7 @@ All notable changes to this project will be documented in this file.
 
 ### Dependencies
 
+- **deps:** Bump stefanzweifel/git-auto-commit-action (#41)
 - **deps:** Bump shivammathur/setup-php (#37)
 - **deps:** Bump orhun/git-cliff-action (#31)
 
