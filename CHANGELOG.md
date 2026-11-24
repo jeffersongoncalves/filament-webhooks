@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### CI/CD
 
+- Bump changelog-updater-action to v1.13.3 (#47)
 - Auto-merge dependabot github-actions minor/patch (#44)
 - Let the Pint workflow push its fixes
 - Auto-merge dependabot github-actions minor/patch
